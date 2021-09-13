@@ -5,7 +5,7 @@ dir.create(here::here("reports"), showWarnings = FALSE)
 
 render_report <- function(fname, lname) {
   rmarkdown::render(
-    "report.Rmd",
+    here::here("examples","report.Rmd"),
     output_file = here::here("reports", paste0(fname, "-", lname, ".pdf")),
     params = list(first_name = fname,
                   last_name = lname)
